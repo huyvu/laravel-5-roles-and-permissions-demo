@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    Auth::loginUsingId(2); // simulate some user
+    Auth::loginUsingId(3); // simulate some user
 
     return view('welcome');
 });
+
+Route::resource('posts', 'PostsController');
